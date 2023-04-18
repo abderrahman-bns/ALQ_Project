@@ -1,0 +1,33 @@
+<mat-form-field
+  *ngIf="control"
+  [ngStyle]="{ 'width.px': widthExp }"
+  appearance="fill"
+>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [placeholder]="placeholder"
+    [formControl]="control"
+    [type]="hide && isPassword ? 'password' : 'text'"
+  />
+  <button
+    *ngIf="isPassword"
+    mat-icon-button
+    matSuffix
+    (click)="hide = !hide"
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide"
+    style="border: none"
+  >
+    <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+  </button>
+  <div
+    *ngIf="
+      control.invalid && control.errors && (control.untouched || control.dirty)
+    "
+  >
+    <mat-error *ngFor="let error of control.errors | errorsKeys">
+      {{ messages[error] }}
+    </mat-error>
+  </div>
+</mat-form-field>

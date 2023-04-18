@@ -1,0 +1,62 @@
+<mat-card class="register-form-wrapper">
+  <mat-card-header>
+    <mat-card-title>
+      <h1 class="register-form-wrapper__title">Register Form</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <div class="register-row-wrapper">
+        <app-shared-ui-input-text
+          [label]="'First name'"
+          [placeholder]="'Enter your first name'"
+          [control]="registerForm.firstname"
+        >
+        </app-shared-ui-input-text>
+        <app-shared-ui-input-text
+          [label]="'Last name'"
+          [placeholder]="'Enter your last name'"
+          [control]="registerForm.lastname"
+        >
+        </app-shared-ui-input-text>
+      </div>
+      <div class="register-row-wrapper">
+        <app-shared-ui-input-text
+          [label]="'Email'"
+          [placeholder]="'Enter your email'"
+          [widthExp]="280"
+          [control]="registerForm.email"
+        >
+        </app-shared-ui-input-text>
+      </div>
+      <div class="register-row-wrapper">
+        <app-shared-ui-input-text
+          [label]="'Password'"
+          [placeholder]="'Enter your password'"
+          [isPassword]="true"
+          [widthExp]="220"
+          [control]="registerForm.password"
+        >
+        </app-shared-ui-input-text>
+        <app-shared-ui-input-text
+          [label]="'Confirm Password'"
+          [placeholder]="'Enter your password'"
+          [isPassword]="true"
+          [widthExp]="220"
+          [control]="registerForm.confirmPassword"
+        >
+        </app-shared-ui-input-text>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="registerForm.invalid"
+      (click)="handleRegistration()"
+    >
+      Register
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,31 @@
+.register-form-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #c2e59c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-form-wrapper__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.register-row-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2em;
+  width: 100%;
+}

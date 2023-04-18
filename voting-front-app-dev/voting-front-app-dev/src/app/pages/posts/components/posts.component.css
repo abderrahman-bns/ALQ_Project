@@ -1,0 +1,11 @@
+.posts-list-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  align-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
